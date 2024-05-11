@@ -1,3 +1,19 @@
+:root {
+  --font-family: "Roboto", sans-serf;
+  --normal-font: 400;
+  --bold-font: 700;
+  --bolder-font: 900;
+  --bg-color: #fcfcfc;
+  --primary-color: #4756df;
+  --secondary-color: #ff7235;
+  --primary-shadow: #8b8eaf;
+  --secondary-shadow: #a17a69;
+  --bottom-margin: 0.5rem;
+  --bottom-margin-2: 1rem;
+  --line-height: 1.7rem;
+  --transition: 0.3s;
+}
+
 .app {
     font-family: 'Poppins', sans-serif;
     font-weight: bold;
@@ -198,9 +214,13 @@
     margin-left: 1.5em;
   }
   
-  .app .nav__hamburger {
+/* Menyembunyikan tombol hamburger di mode desktop */
+@media (min-width: 601px) {
+  .nav__hamburger {
     display: none;
   }
+}
+
   
   .nav__theme {
     margin-top: 0.4em;
@@ -223,11 +243,7 @@
       margin: 0.5em 0;
     }
   
-    .app .nav__hamburger {
-      display: flex;
-      z-index: 2;
-      margin-left: 0.8em;
-    }
+    
   }
   
   .header {
@@ -326,6 +342,10 @@
     }
   }
   
+  .projects {
+    margin-top: 10rem;
+  }
+
   .project {
     padding: 2em;
     margin: 0 auto;
@@ -381,3 +401,31 @@
     margin: 0.5em;
   }
   
+
+  .skills {
+    max-width: 68.75rem;
+    margin: auto;
+    text-align: center;
+    margin-top: 10rem;
+  }
+  
+  .skill-header {
+    margin-bottom: 1rem;
+  }
+  
+  .skills-wrapper img {
+    padding: 1.25rem;
+  }
+  
+  .icon {
+    width: 11.875rem;
+    height: 11.25rem;
+  }
+
+  .icon-card {
+    background-color: #fff;
+    border-radius: 11px;
+    box-shadow: 0 3px 10px var(--secondary-shadow);
+    padding: 20px;
+    margin: 10px;
+  }
