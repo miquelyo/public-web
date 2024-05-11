@@ -1,3 +1,4 @@
+/* CSS ALL FUNCTION */
 :root {
   --font-family: "Roboto", sans-serf;
   --normal-font: 400;
@@ -50,7 +51,7 @@
     margin-top: 5em;
   }
   
-  .section__title {
+  .section-title {
     text-align: center;
     margin-bottom: 1em;
     text-transform: uppercase;
@@ -321,6 +322,7 @@
   
   .contact {
     flex-direction: column;
+    margin-top: 200px;
   }
   
   .footer {
@@ -342,6 +344,8 @@
     }
   }
   
+
+  /* CSS PROJECT */
   .projects {
     margin-top: 10rem;
   }
@@ -355,32 +359,32 @@
   }
   
   .project:hover {
-    transform: translateY(-7px);
+    transform: scale(1.1);
   }
   
-  .project__description {
+  .project-description {
     margin-top: 1em;
   }
   
-  .project__stack {
+  .project-stack {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     margin: 1.2em 0;
   }
   
-  .project__stack-item {
+  .projectstack-item {
     margin: 0.5em;
     font-weight: 500;
     font-size: 0.8rem;
     color: var(--clr-fg-alt);
   }
   
-  .project .link--icon {
+  .project .link-icon {
     margin-left: 0.5em;
   }
   
-  .projects__grid {
+  .projects-grid {
     max-width: 1100px;
     margin: 0 auto;
     display: grid;
@@ -388,19 +392,7 @@
     grid-gap: 2em;
   }
   
-  .skills__list {
-    max-width: 450px;
-    width: 95%;
-    margin: 0 auto;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-  
-  .skills__list-item {
-    margin: 0.5em;
-  }
-  
+  /* CSS SKILLS */
 
   .skills {
     max-width: 68.75rem;
@@ -428,4 +420,9 @@
     box-shadow: 0 3px 10px var(--secondary-shadow);
     padding: 20px;
     margin: 10px;
+    transition: transform 0.3s ease;
+  }
+
+  .icon-card:hover {
+    transform: scale(1.1);
   }
