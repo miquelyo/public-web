@@ -190,11 +190,33 @@ const App = () => {
     return (
       <section className='section contact center' id='contact'>
         <h2 className='section__title'>Contact</h2>
-        <a href={`mailto:${contact.email}`}>
-          <span type='button' className='btn btn--outline'>
-            Email me
-          </span>
-        </a>
+        <div className='contact-container'>
+          <form action='https://api.web3forms.com/submit' method='POST'>
+            <input type='hidden' name='_template' value='k7' />
+            <input type='hidden' name='_next' value='https://miquelyo.com' />
+            <input type='hidden' name='_captcha' value='false' />
+            <input type='hidden' name='_subject' value='New message from miquelyo.com' />
+            <input type='hidden' name='_cc' value='miquelyo@protonmail.com' />
+            <input type='hidden' name='_autoresponse' value='Thank you for reaching out! I will get back to you soon.' />
+            <input type='hidden' name='_autoresponse_from' value='miquelyo@protonmail.com' />
+            <input type='hidden' name='_autoresponse_subject' value='Re: New message from miquelyo.com' />
+            <label>
+              <span>Name</span>
+              <input type='text' name='name' required />
+            </label>
+            <label>
+              <span>Email</span>
+              <input type='email' name='email' required />
+            </label>
+            <label>
+              <span>Message</span>
+              <textarea name='message' required />
+            </label>
+            <button type='submit' className='btn btn--outline'>
+              Send Message
+            </button>
+          </form>
+        </div>
       </section>
     );
   };
@@ -209,4 +231,32 @@ const App = () => {
       </a>
     </footer>
   );
+  
+  document.addEventListener("DOMContentLoaded", function() {
+    const form = document.querySelector('.contact-container form');
+    form.addEventListener('submit', function(event) {
+        event.preventDefault(); // Mencegah submit form secara default
+
+        // Mengumpulkan data dari form
+        const formData = new FormData(form);
+
+        // Mengirim data menggunakan fetch API
+        fetch(form.action, {
+            method: 'POST',
+            body: formData,
+        })
+        .then(response => response.json())
+        .then(data => {
+            if (data.success) {
+                alert('Pesan berhasil dikirim!');
+            } else {
+                alert('Pesan gagal dikirim, silakan coba lagi.');
+            }
+        })
+        .catch(error => {
+            console.error('Error:', error);
+            alert('Terjadi kesalahan, silakan coba lagi.');
+        });
+    });
+});
   
