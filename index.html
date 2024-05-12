@@ -7,6 +7,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" />
     <script src="https://kit.fontawesome.com/fa62c117c7.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="contact.css">
@@ -147,25 +148,53 @@
             </div>
         </div>
         </section>
-        <!-- Contact -->
-        <div class="contact-container">
-          <form action="https://api.web3forms.com/submit" method="POST" class="contact-left">
-            <div class="contact-left-title">
-              <h2>Get in touch</h2>
-              <hr>
-            </div>
-            <input type="hidden" name="access_key" value="e24f7b43-0860-4b9f-ac68-08c7b40ea6e5">
-            <input type="text" name="name" placeholder="Your Name" class="contact-inputs" required>
-            <input type="email" name="email" placeholder="Your Email" class="contact-inputs" required>
-            <textarea name="message" placeholder="Message" class="contact-inputs" required></textarea>
-            <button type="submit" class="contact-button">Send Message</button>
-            
-          </form>
-          <div class="contact-right">
-            <img src="/assets/right_img.png" alt="">
-          </div>
-        </div>
 
+        <!-- CONTACT NEW-->
+        <h2 style="justify-content: center; text-align: center; margin-top: 100px;margin-bottom: -20px;">Contact</h2>
+        <div class="container">
+            <div class="content">
+              <div class="left-side">
+                <div class="address details">
+                  <i class="fas fa-map-marker-alt"></i>
+                  <div class="topic">Address</div>
+                  <div class="text-one">Pontianak, Indonesia</div>
+                  <div class="text-two">Kalimantan Barat</div>
+                </div>
+                <div class="phone details">
+                  <i class="fas fa-phone-alt"></i>
+                  <div class="topic">Phone</div>
+                  <div class="text-one">+628</div>
+                  <div class="text-two">+628</div>
+                </div>
+                <div class="email details">
+                  <i class="fas fa-envelope"></i>
+                  <div class="topic">Email</div>
+                  <div class="text-one">yosafatmiquel@gmail.com</div>
+                  <div class="text-two"></div>
+                </div>
+              </div>
+              <div class="right-side">
+                <div class="topic-text">Send us a message</div>
+                <p>If you any job, you can send me message for join your company. </p>
+              <form action="https://api.web3forms.com/submit" method="POST">
+                <input type="hidden" name="access_key" value="e24f7b43-0860-4b9f-ac68-08c7b40ea6e5">
+                <div class="input-box">
+                  <input type="text" name="name" placeholder="Enter your name" required>
+                </div>
+                <div class="input-box">
+                  <input type="email" name="email" placeholder="Enter your email" required>
+                </div>
+                <div class="input-box message-box">
+                  <textarea name="message" placeholder="Message" required></textarea >
+                </div>
+                <div class="h-captcha" data-captcha="true"></div>
+                <div class="button">
+                  <input type="submit" value="Send Message" >
+                </div>
+              </form>
+            </div>
+            </div>
+          </div>
         
           
     </main>
@@ -179,7 +208,9 @@
         </a>
         </div>
     </div>
+    
     <script src="./script.js"></script>
     <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script src="https://web3forms.com/client/script.js" async defer></script>
     </body>
     </html>
