@@ -19,13 +19,13 @@ body{
   margin-left: 85px;
   margin-top: 80px;
   box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
-  display: inline-flex;
 }
 .container .content{
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
+
 .container .content .left-side{
   width: 25%;
   height: 100%;
